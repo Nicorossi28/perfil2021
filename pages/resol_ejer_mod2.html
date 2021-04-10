@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios Módulo 2</title>
+</head>
+
+<body>
+    <h1>Formularios Módulo 2</h1>
+    <h2>Ingresar dos valores en los campos correspondientes y hacer click en el botón para obtener la suma de ambos</h2>
+
+    <form action="_blank" method="POST">
+        <label for="texto">1er Número: </label>
+        <input type="number" id="numero_1" name="numero_1" step="0.5">
+        <h6></h6>
+        <label for="texto">2do Número: </label>
+        <input type="number" id="numero_2" name="numero_2" step="0.5">
+        <h6></h6>
+        <button type="button" onclick="miSuma()">Sumar</button>
+        <h6></h6>
+
+        <table>
+            <tr>
+                <td><label style="font-size: 26px;" for="texto">La suma de ambos es: </label></td>
+                <td>
+                    <p style="font-size: 26px;" id="sumar_ambos"></p>
+                </td>
+            </tr>
+        </table>
+
+        <script>
+            function miSuma() {
+                var num1, num2, suma_ambos, texto;
+                num1 = document.getElementById("numero_1").value;
+                num2 = document.getElementById("numero_2").value;
+                suma_ambos = parseFloat(num1) + parseFloat(num2);
+                texto = suma_ambos;
+                document.getElementById("sumar_ambos").innerHTML = texto;
+            }
+        </script>
+
+    </form>
+</body>
+
+</html>
