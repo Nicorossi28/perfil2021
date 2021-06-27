@@ -30,6 +30,8 @@
             </tr>
         </table>
 
+        <input type="number" id="numero_3" name="numero_3" step="0.5">
+
         <script>
             function miSuma() {
                 var num1, num2, suma_ambos, texto;
@@ -37,7 +39,19 @@
                 num2 = document.getElementById("numero_2").value;
                 suma_ambos = parseFloat(num1) + parseFloat(num2);
                 texto = suma_ambos;
+
+                /*acá se pega el valor de la suma como párrafo sumar_ambos*/
                 document.getElementById("sumar_ambos").innerHTML = texto;
+                /*acá se pega el valor de la suma como párrafo sumar_ambos*/
+                document.getElementById("numero_3").value = suma_ambos
+
+                if (suma_ambos > 15) {
+                    alert('El número ingresado es mayor que 15')
+                } else {
+                    alert('El número ingresado es menor o igual que 15')
+                }
+
+
             }
         </script>
 
